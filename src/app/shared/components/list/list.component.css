@@ -1,0 +1,25 @@
+.seleccion {
+  background-color: aqua;
+}
+
+.item-card {
+  background-color: beige;
+  margin: 1em;
+  padding: 0.5em;
+  border-radius: 0.4em;
+}
+.item-card-container {
+  display: flex;
+  padding: 0.5em;
+}
+
+.header2 h2 {
+  padding: 0.4em;
+  color: rgb(0, 0, 0);
+}
+
+.main-results {
+  background-color: rgba(209, 209, 209, 0.5);
+  margin: 1em;
+  border-radius: 0.4em;
+}
