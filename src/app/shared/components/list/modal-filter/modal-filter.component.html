@@ -1,0 +1,27 @@
+<div class="container border border-3">
+  <div class="row d-flex">
+    <div class="col-12"><h2>Filtrar por</h2></div>
+
+    <div class="col-12 col-sm-6 d-flex justify-content-center">
+      <input
+        type="text"
+        name=""
+        id=""
+        [(ngModel)]="status"
+        placeholder="Status"
+      />
+    </div>
+    <div class="col-12 col-sm-6 d-flex justify-content-center">
+      <input
+        type="text"
+        name=""
+        id=""
+        [(ngModel)]="prioridad"
+        placeholder="prioridad"
+      />
+    </div>
+
+    <input type="button" value="Aplicar filtros" (click)="getFilters()" />
+    <input type="button" value="Deshacer filtros" />
+  </div>
+</div>
