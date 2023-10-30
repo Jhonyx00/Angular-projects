@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { filter } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
+
 import { DataServiceService } from 'src/app/services/data-service.service';
 
 @Component({
@@ -7,8 +7,15 @@ import { DataServiceService } from 'src/app/services/data-service.service';
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.css'],
 })
-export class ListComponent {
+export class ListComponent implements OnInit {
   constructor(public dataservice: DataServiceService) {}
+
+  numFiltro!: boolean;
+
+  ngOnInit(): void {
+    this.numFiltro = false;
+    console.log(this.numFiltro);
+  }
 
   get mostrarDatos() {
     return this.dataservice.getData();
@@ -21,7 +28,10 @@ export class ListComponent {
   newData: any[] = [];
   //función para obtener la lista de mail
   getDataMailBox(filters: any) {
-    console.log('Imprimir los filtros desde ListComponent', filters);
+    this.numFiltro = true;
+    console.log(this.numFiltro);
+
+    // console.log('Imprimir los filtros desde ListComponent', filters);
 
     if (filters.status && filters.prioridad) {
       this.newData = this.dataservice.getData().filter((data) => {

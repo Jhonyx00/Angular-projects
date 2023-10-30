@@ -1,12 +1,21 @@
-<div class="container">
-  <div class="row d-flex justify-content-center">
-    <div
-      class="col-12 col-sm-6 border border-3"
-      *ngFor="let item of mostrarDatos"
-    >
+<div class="main-results">
+  <div class="header2"><h2>Resultados</h2></div>
+
+  <div class="item-card-container" *ngIf="numFiltro == true; else conFiltro">
+    <div class="item-card" *ngFor="let item of mostrarDatos">
       <h2>Nombre: {{ item.nombre }}</h2>
       <p>Estatus: {{ item.status }}</p>
       <p>prioridad: {{ item.prioridad }}</p>
     </div>
   </div>
+
+  <ng-template #conFiltro>
+    <div class="item-card-container">
+      <div class="item-card" *ngFor="let item of mostrarDatosConFiltro">
+        <p>Nombre: {{ item.nombre }}</p>
+        <p>Estatus: {{ item.status }}</p>
+        <p>prioridad: {{ item.prioridad }}</p>
+      </div>
+    </div>
+  </ng-template>
 </div>

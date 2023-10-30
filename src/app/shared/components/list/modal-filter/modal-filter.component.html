@@ -1,18 +1,21 @@
-<div class="container border border-3">
-  <div class="row d-flex">
-    <div class="col-12"><h2>Filtrar por</h2></div>
-
-    <div class="col-12 col-sm-6 d-flex justify-content-center">
+<div class="header"><h2>Filter example</h2></div>
+<div class="main">
+  <div class="filter-options">
+    <div class="inputs-container">
+      <p class="filter-by">
+        <span class="filter-by-span">Filtrar por:</span>
+      </p>
       <input
+        class=""
         type="text"
         name=""
         id=""
         [(ngModel)]="status"
         placeholder="Status"
       />
-    </div>
-    <div class="col-12 col-sm-6 d-flex justify-content-center">
+
       <input
+        class=""
         type="text"
         name=""
         id=""
@@ -20,8 +23,16 @@
         placeholder="prioridad"
       />
     </div>
+  </div>
 
-    <input type="button" value="Aplicar filtros" (click)="getFilters()" />
-    <input type="button" value="Deshacer filtros" />
+  <div class="filter-actions">
+    <input
+      class=""
+      type="button"
+      value="Aplicar filtros"
+      (click)="getFilters()"
+    />
+
+    <input class="p-2 rounded-3" type="button" value="Deshacer filtros" />
   </div>
 </div>

@@ -1,0 +1,52 @@
+.main {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgba(209, 209, 209, 0.5);
+  margin: 1em;
+  border-radius: 0.4em;
+}
+
+.filter-by {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.4em;
+}
+.filter-by span {
+  text-align: center;
+  font-size: 1em;
+}
+.filter-options {
+  padding: 1em;
+  flex: 2;
+}
+
+.filter-actions {
+  padding: 1em;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.inputs-container {
+  display: flex;
+  justify-content: center;
+}
+
+.inputs-container input,
+.filter-actions input {
+  margin: 0.5em;
+  border-radius: 0.4em;
+  padding: 0.5em;
+  font-size: 1em;
+}
+
+.header {
+  background-color: rgba(209, 209, 209, 0.5);
+  margin: 1em;
+  border-radius: 0.4em;
+}
+.header h2 {
+  padding: 0.4em;
+  color: rgb(0, 0, 0);
+}
